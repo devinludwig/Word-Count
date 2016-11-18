@@ -17,4 +17,7 @@ describe('String#count') do
   it('counts search word even when embedded in another word or surrounded by punctuation') do
     expect('"One lone ranger" hones the bone all alone! Will he telephone the crone? She is long gone.'.count('one')).to(eq(8))
   end
+  it('counts search word multiple times if it appears embedded multiple times in another word') do
+    expect('lonetonebonecronephonecone'.count('one')).to(eq(6))
+  end
 end
