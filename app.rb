@@ -1,6 +1,7 @@
 require('sinatra')
 require('sinatra/reloader')
 require('./lib/count')
+require('./lib/highlight')
 also_reload('lib/**/*.rb')
 
 get('/') do
@@ -8,7 +9,7 @@ get('/') do
 end
 
 get('/count_words') do
-  @text = params.fetch('text')
+  @display_text = params.fetch('text').highlight(params.fetch('search_word'))
   @search_word = params.fetch('search_word')
   @count = (params.fetch('text')).count(params.fetch('search_word'))
   erb(:result)
