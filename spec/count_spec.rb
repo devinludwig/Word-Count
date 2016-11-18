@@ -8,4 +8,7 @@ describe('String#count') do
   it('returns the count of a word when a word is entered as the text multiple times') do
     expect('one one one'.count('one')).to(eq(3))
   end
+  it('returns the count of a search word when the text includes other words') do
+    expect('one two three four one two three'.count('one')).to(eq(2))
+  end
 end
