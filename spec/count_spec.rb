@@ -14,4 +14,7 @@ describe('String#count') do
   it('functions when the search word is capitalized in the text') do
     expect('One two one two One two'.count('one')).to(eq(3))
   end
+  it('counts search word even when embedded in another word or surrounded by punctuation') do
+    expect('"One lone ranger" hones the bone all alone! Will he telephone the crone? She is long gone.'.count('one')).to(eq(8))
+  end
 end

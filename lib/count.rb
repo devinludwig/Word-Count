@@ -3,7 +3,7 @@ class String
     words = downcase.split(' ')
     count = 0
     words.each() do |word|
-      if word.==(search_word.downcase())
+      if word.include?(search_word.downcase())
         count += 1
       end
     end
