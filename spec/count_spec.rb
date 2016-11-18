@@ -11,4 +11,7 @@ describe('String#count') do
   it('returns the count of a search word when the text includes other words') do
     expect('one two three four one two three'.count('one')).to(eq(2))
   end
+  it('functions when the search word is capitalized in the text') do
+    expect('One two one two One two'.count('one')).to(eq(3))
+  end
 end
