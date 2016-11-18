@@ -7,6 +7,8 @@ get('/') do
   erb(:index)
 end
 
-# get('/another_page_here') do
-#   erb(:another_page_here)
-# end
+get('/count_words') do
+  @search_word = params.fetch('search_word')
+  @count = (params.fetch('text')).count(params.fetch('search_word'))
+  erb(:result)
+end

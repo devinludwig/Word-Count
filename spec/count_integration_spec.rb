@@ -1,13 +1,14 @@
-# require('capybara/rspec')
-# require('./app')
-# Capybara.app = Sinatra::Application
-# set(:show_exceptions, false)
-#
-# describe 'the path of your_method', :type => :features do
-#   it('') do
-#     visit('/')
-#     fill_in('', :with => '')
-#     click_button('')
-#     expect(page).to have_content('')
-#   end
-# end
+require('capybara/rspec')
+require('./app')
+Capybara.app = Sinatra::Application
+set(:show_exceptions, false)
+
+describe('the path of count', {:type => :feature}) do
+  it('displays the count of the search word in the text upon form submission on the result page.') do
+    visit('/')
+    fill_in('search_word', :with => 'one')
+    fill_in('text', :with => 'One two one two One two')
+    click_button('Count')
+    expect(page).to have_content('Your search word "one" appears 3 times in the text.')
+  end
+end
