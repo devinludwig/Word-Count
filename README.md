@@ -15,7 +15,7 @@ _This page takes a user input of a word and a text of any length and returns the
 * _Run the 'bundle' command in your computer's terminal._
 * _Enter 'ruby app.rb' in your terminal to run the Sinatra gem._
 * _Navigate to http://localhost:4567/ in your web browser._
-* _You may also view it on Heroku at:_
+* _You may also view it on Heroku at: https://murmuring-headland-52191.herokuapp.com/_
 
 ## Specs
 
