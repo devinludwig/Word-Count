@@ -5,6 +5,12 @@
     <input type="text" name="search_word" placeholder="Search word"><br>
     <label for="text">Enter a text you wish to search:</label><br>
     <input type="text" name="text" placeholder="Text to search">
+    <div>
+      <label for="scan">Scan for:</label>
+      <select class="form-control form-group" id="scan" name="scan">
+         <option value="sequence">Letter sequence, regardless of word</option>
+         <option value="exact">Exact word, standing alone</option>
+      </select>
   </div>
   <button type="submit" class="btn-primary" name="button">Count</button>
 </form>

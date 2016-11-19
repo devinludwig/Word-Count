@@ -20,8 +20,23 @@ _This page takes a user input of a word and a text of any length and returns the
 ## Specs
 
 * _It will return 1 when the same word is entered as both the text and the search word._
-  * _Example Input: one, one_
+  * _Example Input: 'one', 'one'_
   * _Example Output: 1_
+* _It will return the count of a word when a word is entered as the text multiple times._
+  * _Example Input: 'one one one', 'one'_
+  * _Example Output: 3_
+* _It will return the count of a search word when the text includes other words._
+  * _Example Input: 'One two one two One two', 'one'_
+  * _Example Output: 2_
+* _It will function when the search word is capitalized in the text._
+  * _Example Input: 'one two three four one two three', 'one'_
+  * _Example Output: 3_
+* _It will count search word even when embedded in another word or surrounded by punctuation._
+  * _Example Input: '"One lone ranger" hones the bone all alone! Will he telephone the crone? She is long gone.', 'one'_
+  * _Example Output: 8_
+* _It will count search word multiple times if it appears embedded multiple times in another word._
+  * _Example Input: 'lonetonebonecronephonecone', 'one'_
+  * _Example Output: 6_
 
 ## Support and contact details
 
